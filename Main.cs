@@ -38,7 +38,7 @@ namespace TestMod
             }
         }
 
-        public override void VRChat_OnUiManagerInit() // Runs upon VRChat's UiManager Initialization. Only runs if the Mod is used in VRChat.
+        public override void VRChat_OnUiManagerInit()
         {
             UIManagerInit = true;
         }
