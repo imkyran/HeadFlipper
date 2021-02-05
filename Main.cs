@@ -1,4 +1,4 @@
-﻿using MelonLoader;
+using MelonLoader;
 using UnityEngine;
 
 namespace TestMod
@@ -8,8 +8,8 @@ namespace TestMod
         public const string Name = "HeadFlipper";
         public const string Author = "Kyran";
         public const string Company = null;
-        public const string Version = "1.0.0";
-        public const string DownloadLink = null;
+        public const string Version = "1.1.0";
+        public const string DownloadLink = "https://github.com/imkyran/HeadFlipper/releases";
     }
 
     public class TestMod : MelonMod
@@ -29,11 +29,11 @@ namespace TestMod
                 HeadFlipper = !HeadFlipper;
                 if (HeadFlipper && UIManagerInit == true)
                 {
-                    VRCVrCamera.field_Private_Static_VRCVrCamera_0.GetComponentInChildren<NeckMouseRotator>().rotationRange = new Vector3(float.MinValue, 0f, float.MaxValue);
+                    VRCVrCamera.field_Private_Static_VRCVrCamera_0.GetComponentInChildren<NeckMouseRotator>().field_Public_Vector3_0 = new Vector3(float.MinValue, 0f, float.MaxValue);
                 }
                 else if (!HeadFlipper && UIManagerInit == true)
                 {
-                    VRCVrCamera.field_Private_Static_VRCVrCamera_0.GetComponentInChildren<NeckMouseRotator>().rotationRange = new Vector3(0f, 0f, 0f);
+                    VRCVrCamera.field_Private_Static_VRCVrCamera_0.GetComponentInChildren<NeckMouseRotator>().field_Public_Vector3_0 = new Vector3(0f, 0f, 0f);
                 }
             }
         }
